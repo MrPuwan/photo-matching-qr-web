@@ -36,19 +36,7 @@ const Result = () => {
             {persons.length ? persons.join(", ") : "No match found"}
           </span>
         </p>
-        {image && (
-          <div style={{ marginTop: "1rem" }}>
-            <img
-              src={`https://photo-matching-task-puwan-gp.s3.eu-north-1.amazonaws.com/test_images/${image}`}
-              alt={image}
-              style={{
-                maxWidth: "100%",
-                borderRadius: "10px",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-              }}
-            />
-          </div>
-        )}
+        
       </div>
     </div>
   );
