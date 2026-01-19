@@ -10,21 +10,23 @@ const Result = () => {
   return (
     <div
       style={{
+        width: "100vw",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)", // colorful background
+        background: "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
       }}
     >
       <div
         style={{
           padding: "2rem",
           borderRadius: "15px",
-          backgroundColor: "rgba(255, 255, 255, 0.9)", // semi-transparent box
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
           boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
           textAlign: "center",
-          minWidth: "300px",
+          maxWidth: "600px",
+          width: "90%",
         }}
       >
         <h2 style={{ color: "#333" }}>QR Scan Result</h2>
@@ -39,7 +41,11 @@ const Result = () => {
             <img
               src={`https://photo-matching-task-puwan-gp.s3.eu-north-1.amazonaws.com/test_images/${image}`}
               alt={image}
-              style={{ maxWidth: "100%", borderRadius: "10px", boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }}
+              style={{
+                maxWidth: "100%",
+                borderRadius: "10px",
+                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+              }}
             />
           </div>
         )}
