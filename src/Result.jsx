@@ -1,19 +1,23 @@
 import { useSearchParams } from "react-router-dom";
 
-function Result() {
+export default function Result() {
   const [params] = useSearchParams();
-  const persons = params.get("persons");
+
+  const person = params.get("person");
+  const image = params.get("image");
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2>Matched Person(s)</h2>
-      {persons ? (
-        <p>{persons}</p>
+      <h1>QR Scan Result</h1>
+
+      {person ? (
+        <>
+          <p><b>Matched Person(s):</b> {person}</p>
+          <p><b>Image:</b> {image}</p>
+        </>
       ) : (
-        <p>No matches found</p>
+        <p>No match found</p>
       )}
     </div>
   );
 }
-
-export default Result;
