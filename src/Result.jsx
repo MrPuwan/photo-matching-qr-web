@@ -5,7 +5,7 @@ const Result = () => {
   const [searchParams] = useSearchParams();
 
   const persons = searchParams.get("person")?.split(",") || [];
-  const image = searchParams.get("image") || "";
+
 
   return (
     <div
